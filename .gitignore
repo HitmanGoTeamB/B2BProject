@@ -69,8 +69,8 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
-OldPrototype/Library/
+B2BProjectGame/Library/
 
-OldPrototype/Temp/UnityLockfile
+B2BProjectGame/Temp/UnityLockfile
 
-OldPrototype/Temp/
+B2BProjectGame/Temp/
