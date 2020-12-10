@@ -6,21 +6,21 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/OldPrototype/MainScene.unity
+    path: Assets/OldPrototype/Scenes/MainScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
-    path: Assets/Scenes/OldPrototype/QuizScene.unity
+    path: Assets/OldPrototype/Scenes/QuizScene.unity
     guid: b34d2295c69102c42931a853e8fd1fb5
   - enabled: 1
-    path: Assets/Scenes/OldPrototype/MemoryScene.unity
+    path: Assets/OldPrototype/Scenes/MemoryScene.unity
     guid: 8c3f2d71fd59eca47815812a8b4e3a9b
   - enabled: 1
-    path: Assets/Scenes/OldPrototype/FindTheDifferencesScene.unity
+    path: Assets/OldPrototype/Scenes/FindTheDifferencesScene.unity
     guid: d85b35c23cac086428d499111210d28b
   - enabled: 1
-    path: Assets/Scenes/OldPrototype/Bruh.unity
+    path: Assets/OldPrototype/Scenes/Bruh.unity
     guid: 9db511c34bbde1c468e27dbade64d99f
   - enabled: 1
-    path: Assets/Scenes/OldPrototype/FindTheIntruderAltScene.unity
+    path: Assets/OldPrototype/Scenes/FindTheIntruderAltScene.unity
     guid: 621bc85d1d3b0cb42bc6c10102d2fd3f
   m_configObjects: {}
