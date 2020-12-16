@@ -9,6 +9,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 764966742484818732, guid: ef7e57cd7eb92b042947b6baf8e30768,
         type: 3}
+      propertyPath: m_Text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 764966742484818732, guid: ef7e57cd7eb92b042947b6baf8e30768,
+        type: 3}
       propertyPath: m_FontData.m_Font
       value: 
       objectReference: {fileID: 12800000, guid: dc97a44fee47fae449344199ae18bfd1,
@@ -18,6 +23,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: BackBtn
       objectReference: {fileID: 0}
+    - target: {fileID: 6420324161616392843, guid: ef7e57cd7eb92b042947b6baf8e30768,
+        type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6420324161616392843, guid: ef7e57cd7eb92b042947b6baf8e30768,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 15f3c6a052ec1d344ad943f9aa284418,
+        type: 3}
     - target: {fileID: 6420324161616392843, guid: ef7e57cd7eb92b042947b6baf8e30768,
         type: 3}
       propertyPath: m_Color.a
@@ -61,12 +77,22 @@ PrefabInstance:
     - target: {fileID: 7474391499438567176, guid: ef7e57cd7eb92b042947b6baf8e30768,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 250
+      value: 509
       objectReference: {fileID: 0}
     - target: {fileID: 7474391499438567176, guid: ef7e57cd7eb92b042947b6baf8e30768,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 150
+      value: 135
+      objectReference: {fileID: 0}
+    - target: {fileID: 7474391499438567176, guid: ef7e57cd7eb92b042947b6baf8e30768,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 7474391499438567176, guid: ef7e57cd7eb92b042947b6baf8e30768,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 7474391499438567176, guid: ef7e57cd7eb92b042947b6baf8e30768,
         type: 3}
