@@ -18,10 +18,36 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 12800000, guid: dc97a44fee47fae449344199ae18bfd1,
         type: 3}
+    - target: {fileID: 886999828226649037, guid: ef7e57cd7eb92b042947b6baf8e30768,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 512
+      objectReference: {fileID: 0}
+    - target: {fileID: 886999828226649037, guid: ef7e57cd7eb92b042947b6baf8e30768,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 135
+      objectReference: {fileID: 0}
+    - target: {fileID: 886999828226649037, guid: ef7e57cd7eb92b042947b6baf8e30768,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 886999828226649037, guid: ef7e57cd7eb92b042947b6baf8e30768,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5341379100208152375, guid: ef7e57cd7eb92b042947b6baf8e30768,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 15f3c6a052ec1d344ad943f9aa284418,
+        type: 3}
     - target: {fileID: 5462562460274361154, guid: ef7e57cd7eb92b042947b6baf8e30768,
         type: 3}
       propertyPath: m_Name
-      value: BackBtn
+      value: BackToGBtn
       objectReference: {fileID: 0}
     - target: {fileID: 6420324161616392843, guid: ef7e57cd7eb92b042947b6baf8e30768,
         type: 3}
@@ -77,7 +103,7 @@ PrefabInstance:
     - target: {fileID: 7474391499438567176, guid: ef7e57cd7eb92b042947b6baf8e30768,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 509
+      value: 512
       objectReference: {fileID: 0}
     - target: {fileID: 7474391499438567176, guid: ef7e57cd7eb92b042947b6baf8e30768,
         type: 3}
@@ -132,12 +158,12 @@ PrefabInstance:
     - target: {fileID: 7474391499438567176, guid: ef7e57cd7eb92b042947b6baf8e30768,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 7474391499438567176, guid: ef7e57cd7eb92b042947b6baf8e30768,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -50
       objectReference: {fileID: 0}
     - target: {fileID: 7474391499438567176, guid: ef7e57cd7eb92b042947b6baf8e30768,
         type: 3}

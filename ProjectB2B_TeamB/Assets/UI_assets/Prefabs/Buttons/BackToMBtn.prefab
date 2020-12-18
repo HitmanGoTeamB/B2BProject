@@ -1,37 +1,64 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &1681907686015811967
+--- !u!1001 &9068486930391050393
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 764966742484818732, guid: ef7e57cd7eb92b042947b6baf8e30768,
+        type: 3}
+      propertyPath: m_Text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 764966742484818732, guid: ef7e57cd7eb92b042947b6baf8e30768,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: dc97a44fee47fae449344199ae18bfd1,
+        type: 3}
     - target: {fileID: 886999828226649037, guid: ef7e57cd7eb92b042947b6baf8e30768,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 250
+      value: 512
       objectReference: {fileID: 0}
     - target: {fileID: 886999828226649037, guid: ef7e57cd7eb92b042947b6baf8e30768,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 250
+      value: 512
       objectReference: {fileID: 0}
     - target: {fileID: 5341379100208152375, guid: ef7e57cd7eb92b042947b6baf8e30768,
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 1f0ba1e3067a47b43ae6817d972fb132,
+      objectReference: {fileID: 21300000, guid: 1595919c6fbf4eb4787f48b118af14b4,
         type: 3}
     - target: {fileID: 5462562460274361154, guid: ef7e57cd7eb92b042947b6baf8e30768,
         type: 3}
       propertyPath: m_Name
-      value: OptionsBtn
+      value: BackToMBtn
+      objectReference: {fileID: 0}
+    - target: {fileID: 6420324161616392843, guid: ef7e57cd7eb92b042947b6baf8e30768,
+        type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6420324161616392843, guid: ef7e57cd7eb92b042947b6baf8e30768,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 15f3c6a052ec1d344ad943f9aa284418,
+        type: 3}
+    - target: {fileID: 6420324161616392843, guid: ef7e57cd7eb92b042947b6baf8e30768,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7474391499438567176, guid: ef7e57cd7eb92b042947b6baf8e30768,
         type: 3}
       propertyPath: m_Pivot.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7474391499438567176, guid: ef7e57cd7eb92b042947b6baf8e30768,
         type: 3}
@@ -46,7 +73,7 @@ PrefabInstance:
     - target: {fileID: 7474391499438567176, guid: ef7e57cd7eb92b042947b6baf8e30768,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7474391499438567176, guid: ef7e57cd7eb92b042947b6baf8e30768,
         type: 3}
@@ -56,7 +83,7 @@ PrefabInstance:
     - target: {fileID: 7474391499438567176, guid: ef7e57cd7eb92b042947b6baf8e30768,
         type: 3}
       propertyPath: m_AnchorMin.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7474391499438567176, guid: ef7e57cd7eb92b042947b6baf8e30768,
         type: 3}
@@ -66,12 +93,22 @@ PrefabInstance:
     - target: {fileID: 7474391499438567176, guid: ef7e57cd7eb92b042947b6baf8e30768,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 250
+      value: 509
       objectReference: {fileID: 0}
     - target: {fileID: 7474391499438567176, guid: ef7e57cd7eb92b042947b6baf8e30768,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 150
+      value: 135
+      objectReference: {fileID: 0}
+    - target: {fileID: 7474391499438567176, guid: ef7e57cd7eb92b042947b6baf8e30768,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 7474391499438567176, guid: ef7e57cd7eb92b042947b6baf8e30768,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 7474391499438567176, guid: ef7e57cd7eb92b042947b6baf8e30768,
         type: 3}
