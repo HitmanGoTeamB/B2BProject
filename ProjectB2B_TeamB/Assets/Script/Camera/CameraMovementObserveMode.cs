@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CameraMovementObserveMode : MonoBehaviour
 {
@@ -16,7 +17,8 @@ public class CameraMovementObserveMode : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = true;
     }
 
     // Update is called once per frame
@@ -40,5 +42,17 @@ public class CameraMovementObserveMode : MonoBehaviour
     void ZoomCamera(float input)
     {
         Camera.main.orthographicSize = Mathf.Clamp(Camera.main.orthographicSize - input, zoomMin, zoomMax);
+    }
+
+    //modificare da qui
+
+    public void StartMinigame()
+    {
+        SceneManager.LoadScene(3);
+    }
+
+    public void BackToGame()
+    {
+        SceneManager.LoadScene(1);
     }
 }

@@ -547,7 +547,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 465990697}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1667166227}
+        m_MethodName: RestartMinigame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &465990697
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -666,7 +677,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 512155208}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1667166227}
+        m_MethodName: BackToGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &512155208
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1469,7 +1491,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1183668644}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1667166227}
+        m_MethodName: BackToGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1183668644
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1588,7 +1621,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1249234875}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1667166227}
+        m_MethodName: BackToGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1249234875
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2823,7 +2867,7 @@ GameObject:
   - component: {fileID: 2140018490}
   - component: {fileID: 2140018489}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Restart_Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2891,7 +2935,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2140018490}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1667166227}
+        m_MethodName: RestartMinigame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2140018490
 MonoBehaviour:
   m_ObjectHideFlags: 0

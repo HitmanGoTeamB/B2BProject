@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class QuizManager : MonoBehaviour
 {
@@ -26,7 +27,7 @@ public class QuizManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        AskFirstQuestion();
+        AskQuestion();
     }
 
     // Update is called once per frame
@@ -40,6 +41,7 @@ public class QuizManager : MonoBehaviour
         if (currentQuestionNumber >= QuestionsArray.Length)
         {
             GiveMinigameResult(RightAnswerNumber);
+            return;
         }
 
         if (QuestionsArray[currentQuestionNumber] != null)
@@ -103,5 +105,16 @@ public class QuizManager : MonoBehaviour
         {
             AskQuestion();
         }
+    }
+
+    public void RestartMinigame()
+    {
+        SceneManager.LoadScene(3); //scena minigame
+    }
+
+    //momentaneamente qui
+    public void BackToGame()
+    {
+        SceneManager.LoadScene(1); //scena game
     }
 }
