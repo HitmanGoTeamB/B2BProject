@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class IntruiderManager : MonoBehaviour
 {
@@ -13,10 +15,6 @@ public class IntruiderManager : MonoBehaviour
     [SerializeField]
     private float MaxTimer;
     private bool InputEnabled = true;
-
-    //debug
-    public GameObject WINUI;
-    public GameObject LOSEUI;
 
     // Start is called before the first frame update
     void Start()
@@ -35,19 +33,18 @@ public class IntruiderManager : MonoBehaviour
         }
     }
 
-    void CheckForIntruider()
+    public void CheckForIntruider()
     {
         GameObject intruiderHitted = ShootRaycast();
 
-        intruiderHitted.GetComponent<SpriteRenderer>().enabled = true;
+        intruiderHitted.GetComponent<Image>().enabled = true;
 
         intruidersMissing -= 1;
 
         if(intruidersMissing <= 0)
         {
             //activeWinUI
-            WINUI.SetActive(true);
-            InputEnabled = false;
+            SceneManager.LoadScene("10_VictoryScreenUI");
         }
     }
 
@@ -72,8 +69,7 @@ public class IntruiderManager : MonoBehaviour
         if(Timer >= MaxTimer)
         {
             //activeLoseUI
-            LOSEUI.SetActive(true);
-            InputEnabled = false;
+            SceneManager.LoadScene("09_DefeatScreenUI");
         }
     }
 }

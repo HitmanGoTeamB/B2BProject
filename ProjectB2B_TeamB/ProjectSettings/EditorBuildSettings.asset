@@ -6,15 +6,27 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
-    guid: de7b6ca1f887bd94d82b6ec5976170ec
+    path: Assets/Scenes/UI/01_MainMenuUI.unity
+    guid: 5c3456fb3f6a6e9409b394750dd269ed
   - enabled: 1
-    path: Assets/Scenes/GameplayScene.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
+    path: Assets/Scenes/UI/03_OptionsUI.unity
+    guid: 583d19fe05e30a84ca3099536b6233c9
   - enabled: 1
-    path: Assets/Scenes/ObserveModeScene.unity
-    guid: 5979d1c9db460cd4794e323388fcd1c0
+    path: Assets/Scenes/UI/04_ProfileUI.unity
+    guid: d3b2987c484116448bd5fa82dc924858
   - enabled: 1
-    path: Assets/Scenes/TextMinigame.unity
-    guid: 8b9ffbf20880b1f4396c8214033aa0cf
+    path: Assets/Scenes/UI/08_MinigameIntruderUI.unity
+    guid: 472f5561990085f468a7679768d66b71
+  - enabled: 1
+    path: Assets/Scenes/UI/10_VictoryScreenUI.unity
+    guid: 771baff875d57474e96bd3c8345cc975
+  - enabled: 1
+    path: Assets/Scenes/UI/09_DefeatScreenUI.unity
+    guid: c09e62e11e4b78c418a0fd2f59279e30
+  - enabled: 1
+    path: Assets/Scenes/UI/07_MinigameQuizUI.unity
+    guid: 1ff33f69c29ec8e4d88f57a6a0175369
+  - enabled: 1
+    path: Assets/Scenes/UI/06_MinigameMemoryUI.unity
+    guid: c58246037fa37ef4894af74bf1cc275e
   m_configObjects: {}

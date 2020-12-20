@@ -16,6 +16,7 @@ public class PlayerMovement : MonoBehaviour
     private float xAxisRotation;
     private float yAxisRotation;
     private ArtworkCollider artworkCollider;
+    private bool wallCollision;
     
 
     private void OnValidate()
@@ -55,7 +56,7 @@ public class PlayerMovement : MonoBehaviour
         }
             
 
-        if (this.transform.position != finalPosition)
+        if (this.transform.position != finalPosition && wallCollision == false)
             transform.position = Vector3.MoveTowards(this.transform.position, finalPosition, playerMoveSpeed * Time.deltaTime);
     }
 
@@ -88,5 +89,15 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.collider.gameObject.CompareTag("Wall"))
+        {
+            wallCollision = true;
 
+            finalPosition = this.transform.position;
+
+            wallCollision = false;
+        }
+    }
 }
