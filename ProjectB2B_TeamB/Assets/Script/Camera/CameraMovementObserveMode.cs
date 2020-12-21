@@ -8,6 +8,8 @@ public class CameraMovementObserveMode : MonoBehaviour
     private Vector3 startInput;
     [SerializeField]
     private float viewSensitivity;
+    [SerializeField]
+    private float zoomSensitivity;
     public float zoomMax;
     public float zoomMin;
 
@@ -22,21 +24,30 @@ public class CameraMovementObserveMode : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 stageDimensions = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, 0));
-
         if (Input.GetMouseButtonDown(0))
         {
             startInput = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        }
+        if(Input.touchCount == 2)
+        {
+            Touch touchZero = Input.GetTouch(0);
+            Touch touchOne = Input.GetTouch(1);
+
+            Vector2 touchZeroPrevPosition = touchZero.position - touchZero.deltaPosition;
+            Vector2 touchOnePrevPosition = touchOne.position - touchOne.deltaPosition;
+
+            float previousDistance = (touchZeroPrevPosition - touchOnePrevPosition).magnitude;
+            float currentDistance = (touchZero.position - touchOne.position).magnitude;
+
+            float DistanceDifference = currentDistance - previousDistance;
+
+            ZoomCamera(DistanceDifference * zoomSensitivity);
         }
         if (Input.GetMouseButton(0))
         {
             Vector3 direction = startInput - Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Camera.main.transform.position += direction * viewSensitivity * Time.deltaTime;
-            //Mathf.Clamp(Camera.main.transform.position.x, , );
-            //Mathf.Clamp(Camera.main.transform.position.y, , );
         }
-
-        ZoomCamera(Input.GetAxis("Mouse ScrollWheel"));
     }
 
     void ZoomCamera(float input)

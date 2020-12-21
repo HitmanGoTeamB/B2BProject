@@ -211,12 +211,12 @@ PrefabInstance:
     - target: {fileID: 1901613775220836241, guid: b9dc07da36159d2449c5b24663fcbd27,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 35.900024
+      value: 35.899902
       objectReference: {fileID: 0}
     - target: {fileID: 1901613775220836241, guid: b9dc07da36159d2449c5b24663fcbd27,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -18.400024
+      value: -18.400146
       objectReference: {fileID: 0}
     - target: {fileID: 1901613775220836241, guid: b9dc07da36159d2449c5b24663fcbd27,
         type: 3}
@@ -500,22 +500,22 @@ PrefabInstance:
     - target: {fileID: 7474391499438567176, guid: ef7e57cd7eb92b042947b6baf8e30768,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7474391499438567176, guid: ef7e57cd7eb92b042947b6baf8e30768,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7474391499438567176, guid: ef7e57cd7eb92b042947b6baf8e30768,
         type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7474391499438567176, guid: ef7e57cd7eb92b042947b6baf8e30768,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7474391499438567176, guid: ef7e57cd7eb92b042947b6baf8e30768,
         type: 3}
@@ -565,12 +565,12 @@ PrefabInstance:
     - target: {fileID: 7474391499438567176, guid: ef7e57cd7eb92b042947b6baf8e30768,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 704
+      value: -256
       objectReference: {fileID: 0}
     - target: {fileID: 7474391499438567176, guid: ef7e57cd7eb92b042947b6baf8e30768,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 472.5
+      value: -67.5
       objectReference: {fileID: 0}
     - target: {fileID: 7474391499438567176, guid: ef7e57cd7eb92b042947b6baf8e30768,
         type: 3}
@@ -915,8 +915,8 @@ Camera:
   m_GameObject: {fileID: 698337623}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0.21186364, g: 0.21698111, b: 0.21698111, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -1006,7 +1006,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5854fac203369ad4ea11f58480b90d5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  viewSensitivity: 3
+  viewSensitivity: 9
+  zoomSensitivity: 0.002
   zoomMax: 1.3
   zoomMin: 0.45
 --- !u!1 &728088944

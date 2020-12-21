@@ -35,4 +35,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/UI/05_ObserveModeUI.unity
     guid: e2caa4e6a7d34d641a9be8be4eccd63d
+  - enabled: 1
+    path: Assets/Scenes/UI/03_OptionsUIGAME.unity
+    guid: 8f6c7408f27a07042bcf4524afe64d28
   m_configObjects: {}

@@ -18,7 +18,11 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private ArtworkCollider[] artworkCollider = new ArtworkCollider[3];
     private bool wallCollision;
-    
+    private Touch touch;
+    private Vector2 beginTouchPosition, endTouchPosition, LookInput;
+    private float StartTime, EndTime;
+    [SerializeField]
+    private float deltatimeclick;
 
     private void OnValidate()
     {
@@ -37,24 +41,46 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         #region ViewControls
-        float mouseX = Input.GetAxis("Mouse X") * viewSensitivity * Time.deltaTime;
-        float mouseY = Input.GetAxis("Mouse Y") * viewSensitivity * Time.deltaTime;
 
-        xAxisRotation -= mouseY;
-        xAxisRotation = Mathf.Clamp(xAxisRotation, -90f, 90f);
-        yAxisRotation = mouseX;
-
-        transform.Rotate(Vector3.up * yAxisRotation);
-        mainCamera.transform.localRotation = Quaternion.Euler(xAxisRotation, 0f, 0f);
-        #endregion
-
-        if (Input.GetMouseButtonDown(0))
+        if(Input.touchCount > 0)
         {
-            CheckforArtwork();
-            finalPosition = SetFinalPosition();
-            Debug.Log("Point PostClamp " + finalPosition);
-        }
-            
+            touch = Input.GetTouch(0);
+
+            switch (touch.phase)
+            {
+                case TouchPhase.Began:
+                    beginTouchPosition = touch.position;
+                    StartTime = Time.time;
+                    break;
+
+                case TouchPhase.Moved:
+                    LookInput = touch.deltaPosition * viewSensitivity * Time.deltaTime;
+                    //xAxisRotation -= InputY;
+                    xAxisRotation = Mathf.Clamp(xAxisRotation - LookInput.y, -90f, 90f);
+
+                    transform.Rotate(Vector3.up * LookInput.x);
+                    mainCamera.transform.localRotation = Quaternion.Euler(xAxisRotation, 0f, 0f);
+                    break;
+
+                case TouchPhase.Ended:
+                    endTouchPosition = touch.position;
+                    EndTime = Time.time;
+
+                    float deltatime = EndTime - StartTime;
+
+                    if (deltatime < deltatimeclick)
+                    {
+                        Debug.Log("move");
+                        CheckforArtwork();
+                        finalPosition = SetFinalPosition();
+                    }
+                        
+                    if (deltatime >= deltatimeclick)
+                        Debug.Log("NOMOVE");
+                    break;
+            }
+        }        
+        #endregion
 
         if (this.transform.position != finalPosition && wallCollision == false)
             transform.position = Vector3.MoveTowards(this.transform.position, finalPosition, playerMoveSpeed * Time.deltaTime);
