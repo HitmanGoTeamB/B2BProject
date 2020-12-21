@@ -14,6 +14,8 @@ public class IntruiderManager : MonoBehaviour
     private float Timer;
     [SerializeField]
     private float MaxTimer;
+    [SerializeField]
+    private Text TimerUIText;
     private bool InputEnabled = true;
 
     // Start is called before the first frame update
@@ -64,12 +66,25 @@ public class IntruiderManager : MonoBehaviour
     {
         Timer += Time.deltaTime;
 
-        Debug.Log(Timer);
+        Debug.Log(Timer.ToString("F1"));
 
-        if(Timer >= MaxTimer)
+        TimerUIText.text = Timer.ToString("F1");
+
+        if (Timer >= MaxTimer)
         {
             //activeLoseUI
             SceneManager.LoadScene("09_DefeatScreenUI");
+        }
+    }
+
+    public void ButtonUI()
+    {
+        intruidersMissing -= 1;
+
+        if (intruidersMissing <= 0)
+        {
+            //activeWinUI
+            SceneManager.LoadScene("10_VictoryScreenUI");
         }
     }
 }

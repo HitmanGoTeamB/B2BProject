@@ -18,11 +18,12 @@ public class QuizManager : MonoBehaviour
     private Text RightAnswerNumberUI;
     private int RightAnswerNumber = 0;
     [SerializeField]
-    private GameObject MinigameWinScreen;
+    private GameObject TrueButton;
     [SerializeField]
-    private GameObject MinigameLoseScreen;
+    private GameObject FalseButton;
+    private bool inputEnabled = false;
     [SerializeField]
-    private GameObject minigameQuestionCanvas;
+    private Text DescriptionTextUI;
 
     // Start is called before the first frame update
     void Start()
@@ -33,7 +34,15 @@ public class QuizManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(inputEnabled == true)
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                currentQuestionNumber++;
+                ActivateButtonDeactivateDescription(TrueButton, FalseButton);
+                AskQuestion();
+            }
+        }
     }
 
     void AskQuestion()
@@ -47,9 +56,7 @@ public class QuizManager : MonoBehaviour
         if (QuestionsArray[currentQuestionNumber] != null)
             currentQuestion = QuestionsArray[currentQuestionNumber];
 
-        QuestionTextUI.text = QuestionsArray[currentQuestionNumber].QuestionText;
-
-        currentQuestionNumber++;      
+        QuestionTextUI.text = QuestionsArray[currentQuestionNumber].QuestionText;     
     }
 
     void AskFirstQuestion()
@@ -69,13 +76,11 @@ public class QuizManager : MonoBehaviour
     {
         if(RightQuestionAnswered == 3)
         {
-            MinigameWinScreen.SetActive(true);
-            minigameQuestionCanvas.SetActive(false);
+            SceneManager.LoadScene("10_VictoryScreenUI");
         }
         else
         {
-            MinigameLoseScreen.SetActive(true);
-            minigameQuestionCanvas.SetActive(false);
+            SceneManager.LoadScene("09_DefeatScreenUI");
         }
     }
 
@@ -85,11 +90,12 @@ public class QuizManager : MonoBehaviour
         {
             RightAnswerNumber++;
             RightAnswerNumberUI.text = RightAnswerNumber.ToString();
-            AskQuestion();
+
+            DeactivateButtonsActivateDescription(TrueButton, FalseButton);
         }
         else
         {
-            AskQuestion();
+            DeactivateButtonsActivateDescription(TrueButton, FalseButton);
         }
     }
 
@@ -99,22 +105,27 @@ public class QuizManager : MonoBehaviour
         {
             RightAnswerNumber++;
             RightAnswerNumberUI.text = RightAnswerNumber.ToString();
-            AskQuestion();
+            DeactivateButtonsActivateDescription(TrueButton, FalseButton);
         }
         else
         {
-            AskQuestion();
+            DeactivateButtonsActivateDescription(TrueButton, FalseButton);
         }
     }
 
-    public void RestartMinigame()
+    void DeactivateButtonsActivateDescription(GameObject trueButton, GameObject falseButton)
     {
-        SceneManager.LoadScene(3); //scena minigame
+        DescriptionTextUI.text = QuestionsArray[currentQuestionNumber].Description;
+        trueButton.SetActive(false);
+        falseButton.SetActive(false);
+        inputEnabled = true;        
     }
 
-    //momentaneamente qui
-    public void BackToGame()
+    void ActivateButtonDeactivateDescription(GameObject trueButton, GameObject falseButton)
     {
-        SceneManager.LoadScene(1); //scena game
+        DescriptionTextUI.text = "";
+        trueButton.SetActive(true);
+        falseButton.SetActive(true);
+        inputEnabled = false;
     }
 }

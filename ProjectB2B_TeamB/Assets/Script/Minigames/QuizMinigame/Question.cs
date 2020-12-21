@@ -9,4 +9,5 @@ public class Question
 
     public bool Answer;
 
+    public string Description;
 }
