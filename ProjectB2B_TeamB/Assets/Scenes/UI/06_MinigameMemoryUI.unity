@@ -1761,7 +1761,7 @@ MonoBehaviour:
   CardLayer:
     serializedVersion: 2
     m_Bits: 2048
-  MaxErrorsPossible: 3
+  MaxErrorsPossible: 4
   CurrentErrorText: {fileID: 971386488}
   MaxErrorText: {fileID: 332573634}
 --- !u!1 &1750145106
