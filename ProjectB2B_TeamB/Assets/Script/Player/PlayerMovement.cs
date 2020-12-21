@@ -15,7 +15,8 @@ public class PlayerMovement : MonoBehaviour
     private float viewSensitivity;
     private float xAxisRotation;
     private float yAxisRotation;
-    private ArtworkCollider artworkCollider;
+    [SerializeField]
+    private ArtworkCollider[] artworkCollider = new ArtworkCollider[3];
     private bool wallCollision;
     
 
@@ -28,7 +29,6 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        artworkCollider = FindObjectOfType<ArtworkCollider>();
         finalPosition = this.transform.position;
         Cursor.lockState = CursorLockMode.Locked;
     }
@@ -69,7 +69,7 @@ public class PlayerMovement : MonoBehaviour
         if (Physics.Raycast(ray, out RaycastHit raycasthit, Mathf.Infinity, layermaskFloor))
         {
             //return final position
-            return new Vector3(Mathf.Clamp(raycasthit.point.x, -9.5f, 9.5f), this.transform.position.y, Mathf.Clamp(raycasthit.point.z, -9.5f, 9.5f));
+            return new Vector3(raycasthit.point.x, this.transform.position.y, raycasthit.point.z);
         }
 
         //return this position
@@ -82,10 +82,15 @@ public class PlayerMovement : MonoBehaviour
 
         if (Physics.Raycast(ray, out RaycastHit raycasthit, Mathf.Infinity, layermaskArtwork))
         {
-            if(artworkCollider.IsArtworkInteractable == true)
+            foreach(ArtworkCollider artworkCollider in artworkCollider)
             {
-                artworkCollider.ActiveObserveMode();
-            }
+                if (artworkCollider.IsArtworkInteractable == true)
+                {
+                    PlayerPrefs.SetInt("ArtworkID", raycasthit.collider.GetComponent<Artwork>().artworkID);
+
+                    artworkCollider.ActiveObserveMode();
+                }
+            }           
         }
     }
 

@@ -39,6 +39,6 @@ public class ArtworkCollider : MonoBehaviour
 
     public void ActiveObserveMode()
     {
-        SceneManager.LoadScene("ObserveModeScene");
+        SceneManager.LoadScene("05_ObserveModeUI");
     }
 }

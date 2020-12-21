@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Card : MonoBehaviour
+public class Artwork : MonoBehaviour
 {
-    public int ID;
+    public int artworkID;
 }

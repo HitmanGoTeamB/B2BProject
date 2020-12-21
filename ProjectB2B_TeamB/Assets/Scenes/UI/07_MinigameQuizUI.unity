@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -219,7 +219,7 @@ PrefabInstance:
     - target: {fileID: 1901613775220836241, guid: b9dc07da36159d2449c5b24663fcbd27,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1901613775220836241, guid: b9dc07da36159d2449c5b24663fcbd27,
         type: 3}
@@ -529,13 +529,20 @@ MonoBehaviour:
   QuestionsArray:
   - QuestionText: This painting's known period of creation is around 1582.
     Answer: 1
-    Description: DESCRIZIONE TEST DOMANDA 1
+    Description: 'San Nicolo''s church kept, before the suppression, an important
+      cycle of paintings from the artist Veronese. Sadly it was scattered in different
+      locations: this cycle attests the maturity but also the last greatest religious
+      work of the master. By consulting the chronological order, it is hypothesized
+      on the data of the rededication of the church in 1582.'
   - QuestionText: "Was Veronese\u2019s objective to show the complexity of the environment? "
     Answer: 0
-    Description: DESCRIZIONE TEST DOMANDA 2
+    Description: In this artwork Veronese shows his ability to manage complex representations
+      by using theatrical devices, such as plays of light or exasperated gestures.
   - QuestionText: 'In this painting Jesus is surrounded by Angels. '
     Answer: 1
-    Description: DESCRIZIONE TEST DOMANDA 3
+    Description: The Christ baptized from Battista is surrounded by angels and shifted
+      all the way to the left, in a fumigation of lights that depart from the dove
+      of the Holy Spirit.
   QuestionTextUI: {fileID: 1745134243}
   RightAnswerNumberUI: {fileID: 1620957071}
   TrueButton: {fileID: 615964827}
@@ -728,7 +735,7 @@ PrefabInstance:
     - target: {fileID: 7474391499438567176, guid: ef7e57cd7eb92b042947b6baf8e30768,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7474391499438567176, guid: ef7e57cd7eb92b042947b6baf8e30768,
         type: 3}
@@ -917,6 +924,84 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 795847212}
   m_CullTransparentMesh: 0
+--- !u!1 &1042215016
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1042215017}
+  - component: {fileID: 1042215019}
+  - component: {fileID: 1042215018}
+  m_Layer: 5
+  m_Name: TrueText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1042215017
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1042215016}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1707640040}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -285.6001, y: -73.6001}
+  m_SizeDelta: {x: -1786.5789, y: -1028.1432}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1042215018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1042215016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 3bc8dec65e7df884caace67a1428e1ec, type: 3}
+    m_FontSize: 41
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 43
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: True
+--- !u!222 &1042215019
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1042215016}
+  m_CullTransparentMesh: 0
 --- !u!1 &1081490127
 GameObject:
   m_ObjectHideFlags: 0
@@ -1008,6 +1093,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1707640040}
     m_Modifications:
+    - target: {fileID: 140498076147533854, guid: ef7e57cd7eb92b042947b6baf8e30768,
+        type: 3}
+      propertyPath: m_Name
+      value: FalseText
+      objectReference: {fileID: 0}
     - target: {fileID: 764966742484818732, guid: ef7e57cd7eb92b042947b6baf8e30768,
         type: 3}
       propertyPath: m_Text
@@ -1096,7 +1186,7 @@ PrefabInstance:
     - target: {fileID: 7474391499438567176, guid: ef7e57cd7eb92b042947b6baf8e30768,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7474391499438567176, guid: ef7e57cd7eb92b042947b6baf8e30768,
         type: 3}
@@ -1280,7 +1370,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Explanation text bla bla bla
+  m_Text: 
 --- !u!222 &1460619445
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1288,6 +1378,84 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1460619442}
+  m_CullTransparentMesh: 0
+--- !u!1 &1551783832
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1551783833}
+  - component: {fileID: 1551783835}
+  - component: {fileID: 1551783834}
+  m_Layer: 5
+  m_Name: FalseText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1551783833
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1551783832}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1707640040}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 281.81006, y: -73.60101}
+  m_SizeDelta: {x: -1786.7549, y: -1028.1404}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1551783834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1551783832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 3bc8dec65e7df884caace67a1428e1ec, type: 3}
+    m_FontSize: 41
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 43
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: False
+--- !u!222 &1551783835
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1551783832}
   m_CullTransparentMesh: 0
 --- !u!1 &1607009336
 GameObject:
@@ -1345,7 +1513,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ca7bcaf9ebfb4644981383b9d4953684, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f47abbf1b6c6dcf47a271efc8c83a538, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1538,6 +1706,8 @@ RectTransform:
   - {fileID: 1745134242}
   - {fileID: 1620957070}
   - {fileID: 458677277}
+  - {fileID: 1042215017}
+  - {fileID: 1551783833}
   - {fileID: 792572587}
   - {fileID: 1371670336}
   - {fileID: 198835611}

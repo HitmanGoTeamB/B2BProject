@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class MemoryManager : MonoBehaviour
 {
@@ -16,6 +18,10 @@ public class MemoryManager : MonoBehaviour
     [SerializeField]
     private int MaxErrorsPossible;
     private int CurrentErrorNumber;
+    [SerializeField]
+    private Text CurrentErrorText;
+    [SerializeField]
+    private Text MaxErrorText;
 
 
     // Start is called before the first frame update
@@ -24,21 +30,28 @@ public class MemoryManager : MonoBehaviour
         CardInSceneCheck(CardInscene);
 
         ActiveCardNumber = CardInscene.Length;
+
+        MaxErrorText.text = MaxErrorsPossible.ToString();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && InputEnabled == true)
         {
             Card CardHittedFromClick = RaycastAndCheckForCard();
-
-            //animazione flip carta
-
+            
             if(CardHittedFromClick != null)
+            {
+                //StartCoroutine(FlipCardAndWait(CardHittedFromClick, 1f));
+                CardHittedFromClick.gameObject.transform.Rotate(Vector3.up, 180f);
                 AddCardToFlippedCards(CardHittedFromClick, CardFlipped);
+            }
 
-            CoupleControl(CardFlipped);
+            //CoupleControl(CardFlipped);
+
+
+            StartCoroutine(CoupleControlCoroutine(CardFlipped, 1.6f));
         }
     }
 
@@ -82,11 +95,11 @@ public class MemoryManager : MonoBehaviour
     {
         if(ActiveCardNumber == 0)
         {
-            //activeWinUI
+            SceneManager.LoadScene("10_VictoryScreenUI");
         }
         else if(CurrentErrorNumber >= MaxErrorsPossible)
         {
-            //activeLoseUI
+            SceneManager.LoadScene("09_DefeatScreenUI");
         }
     }
 
@@ -109,14 +122,41 @@ public class MemoryManager : MonoBehaviour
             }
             else
             {
-                //animation
 
-                //updateErrorsUI
+                CurrentErrorNumber++;
+                CurrentErrorText.text = CurrentErrorNumber.ToString();
+
+                foreach(Card card in FlippedCards)
+                {
+                    card.gameObject.transform.Rotate(Vector3.up, 180f);
+                }
 
                 RemoveFromFlippedCards(FlippedCards);
 
                 WinOrLoseCheck();
             }
         }
+    }
+
+    IEnumerator FlipCardAndWait(Card cardtoflip, float timeToWait)
+    {
+        InputEnabled = false;
+        cardtoflip.gameObject.transform.Rotate(Vector3.up, 180f);
+        yield return new WaitForSeconds(timeToWait);
+        InputEnabled = true;
+
+    }
+
+    IEnumerator CoupleControlCoroutine(List<Card> flippedcards, float timeToWait)
+    {
+        if(flippedcards.Count == 2)
+            InputEnabled = false;
+
+        yield return new WaitForSeconds(timeToWait);
+
+        if (flippedcards.Count == 2)
+            InputEnabled = true;
+        
+        CoupleControl(CardFlipped);
     }
 }

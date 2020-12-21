@@ -41,4 +41,32 @@ public class UIManager : MonoBehaviour
     {
         PlayerPrefs.SetString("SoundEnabled", name);
     }
+
+    public void MapActive(GameObject map)
+    {
+        if(map.activeInHierarchy == true)
+        {
+            map.SetActive(false);
+        }
+        else if(map.activeInHierarchy == false)
+        {
+            map.SetActive(true);
+        }
+    }
+
+    public void retryminigame()
+    {
+        if (PlayerPrefs.GetInt("ArtworkID") == 0)
+        {
+            SceneManager.LoadScene("06_MinigameMemoryUI");
+        }
+        else if (PlayerPrefs.GetInt("ArtworkID") == 1)
+        {
+            SceneManager.LoadScene("08_MinigameIntruderUI");
+        }
+        else if (PlayerPrefs.GetInt("ArtworkID") == 2)
+        {
+            SceneManager.LoadScene("07_MinigameQuizUI");
+        }
+    }
 }

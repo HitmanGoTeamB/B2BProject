@@ -8,10 +8,8 @@ public class CameraMovementObserveMode : MonoBehaviour
     private Vector3 startInput;
     [SerializeField]
     private float viewSensitivity;
-    [SerializeField]
-    private float viewUPLimit, viewDownLimit, viewRightLimit, viewLeftLimit;
-    private float zoomMax = 1.3f;
-    private float zoomMin = 0.45f;
+    public float zoomMax;
+    public float zoomMin;
 
 
     // Start is called before the first frame update
@@ -24,6 +22,8 @@ public class CameraMovementObserveMode : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Vector3 stageDimensions = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, 0));
+
         if (Input.GetMouseButtonDown(0))
         {
             startInput = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -32,8 +32,8 @@ public class CameraMovementObserveMode : MonoBehaviour
         {
             Vector3 direction = startInput - Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Camera.main.transform.position += direction * viewSensitivity * Time.deltaTime;
-            Mathf.Clamp(Camera.main.transform.position.x, viewRightLimit, viewLeftLimit);
-            Mathf.Clamp(Camera.main.transform.position.y, viewUPLimit, viewDownLimit);
+            //Mathf.Clamp(Camera.main.transform.position.x, , );
+            //Mathf.Clamp(Camera.main.transform.position.y, , );
         }
 
         ZoomCamera(Input.GetAxis("Mouse ScrollWheel"));
